@@ -1,0 +1,4 @@
+in/appinit/model/models/Model.class
+in/appinit/model/models/Property.class
+in/appinit/model/models/tx/TxModel.class
+in/appinit/model/models/tx/TxProperty.class

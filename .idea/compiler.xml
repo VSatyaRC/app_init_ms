@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="app-config" />
+        <module name="appinit-files" />
+        <module name="appinit-discovery-server" />
+        <module name="appinit-gateway" />
+        <module name="data-models-tx" />
+        <module name="appinit-pages" />
+        <module name="data-models" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="app-config" target="11" />
+      <module name="appinit-discovery-server" target="11" />
+      <module name="appinit-files" target="11" />
+      <module name="appinit-gateway" target="11" />
+      <module name="appinit-page-events" target="11" />
+      <module name="appinit-pages" target="11" />
+      <module name="appinit-widgets" target="11" />
+      <module name="data-models" target="11" />
+      <module name="data-models-tx" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="app-config" options="-parameters" />
+      <module name="appinit-discovery-server" options="-parameters" />
+      <module name="appinit-files" options="-parameters" />
+      <module name="appinit-gateway" options="-parameters" />
+      <module name="appinit-page-events" options="-parameters" />
+      <module name="appinit-pages" options="-parameters" />
+      <module name="appinit-widgets" options="-parameters" />
+      <module name="data-models" options="-parameters" />
+    </option>
+  </component>
+</project>

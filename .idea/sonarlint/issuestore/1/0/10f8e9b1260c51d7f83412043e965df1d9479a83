@@ -1,0 +1,24 @@
+
+n
+java:S1192 "SDefine a constant instead of duplicating this literal "Deleted all models" 3 times.(Œ¬‚×ùÿÿÿÿ
+`
+java:S4488"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(š™¨Ù
+c
+java:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(óšöúÿÿÿÿ
+i
+java:S4488"NReplace "@RequestMapping(method = RequestMethod.DELETE)" with "@DeleteMapping"(ì‹½ùÿÿÿÿ
+i
+java:S4488#"NReplace "@RequestMapping(method = RequestMethod.DELETE)" with "@DeleteMapping"(‚ÈÛĞÿÿÿÿÿ
+i
+java:S4488)"NReplace "@RequestMapping(method = RequestMethod.DELETE)" with "@DeleteMapping"(îŞÈûÿÿÿÿ
+S	java:S106+"9Replace this use of System.out or System.err by a logger.(‘¹ûùÿÿÿÿ
+`
+java:S44880"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ø´Ÿ
+S	java:S1062"9Replace this use of System.out or System.err by a logger.(ª±’°úÿÿÿÿ
+c
+java:S44886"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ß¼Ÿ¼øÿÿÿÿ
+c
+java:S4488;"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(Ş™¥şÿÿÿÿ
+S	java:S106="9Replace this use of System.out or System.err by a logger.( óåõøÿÿÿÿ
+e
+java:S4488A"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ã§Êıÿÿÿÿ

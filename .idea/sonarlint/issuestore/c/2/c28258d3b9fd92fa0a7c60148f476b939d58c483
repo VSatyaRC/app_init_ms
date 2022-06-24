@@ -1,0 +1,19 @@
+
+i
+java:S1192."GDefine a constant instead of duplicating this literal "layout" 3 times.(Ş·¼®ıÿÿÿÿ8¼ø˜·†0
+_
+java:S1192K"IDefine a constant instead of duplicating this literal "children" 3 times.(úä¬É
+b
+java:S1192)"LDefine a constant instead of duplicating this literal "widgetsList" 3 times.(Ö·†‚
+a
+java:S1192G"FDefine a constant instead of duplicating this literal "child" 3 times.(é¦ ¾ıÿÿÿÿ
+^
+java:S1192("HDefine a constant instead of duplicating this literal "rootKey" 3 times.(€ÔÀÄ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(‘ûÈñ
+N	java:S106%"9Replace this use of System.out or System.err by a logger.(³¸àß
+B
+java:S1602)",Remove useless curly braces around statement(Ö·†‚
+B
+java:S16026",Remove useless curly braces around statement(Ñ—ÔÙ
+G
+java:S1602M",Remove useless curly braces around statement(–§ßûÿÿÿÿ

@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: appinit-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: app-config-ms
+          uri: lb://app-config
+          predicates:
+            - Path=/app/**
+        - id: appinit-files-ms
+          uri: lb://appinit-files
+          predicates:
+            - Path=/resource/**
+        - id: appinit-models-ms
+          uri: lb://appinit-models
+          predicates:
+            - Path=/models/**
+        - id: appinit-pages-ms
+          uri: lb://appinit-pages
+          predicates:
+            - Path=/page-config/**
+
+
+#        - id: appinit-page-events-ms
+#          uri: lb://appinit-page-events
+#          predicates:
+#            - Path=/page-events/**
+
+#        - id: appinit-widgets-ms
+#          uri: lb://appinit-widgets
+#          predicates:
+#            - Path=/widgets/**

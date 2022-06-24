@@ -1,0 +1,9 @@
+
+c
+java:S1192"HDefine a constant instead of duplicating this literal "message" 4 times.(€หๅ๙ÿÿÿÿÿ
+`
+java:S4488"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(หอๅก
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ืบÞส
+`
+java:S4488&"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ูฃý
+N	java:S106)"9Replace this use of System.out or System.err by a logger.(ืบÞส
