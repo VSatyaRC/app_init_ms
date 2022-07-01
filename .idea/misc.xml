@@ -9,8 +9,6 @@
         <option value="$PROJECT_DIR$/appinit-pages/pom.xml" />
         <option value="$PROJECT_DIR$/data-models-tx/pom.xml" />
         <option value="$PROJECT_DIR$/appinit-gateway/pom.xml" />
-        <option value="$PROJECT_DIR$/appinit-widgets/pom.xml" />
-        <option value="$PROJECT_DIR$/appinit-page-events/pom.xml" />
         <option value="$PROJECT_DIR$/appinit-discovery-server/pom.xml" />
       </list>
     </option>

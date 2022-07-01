@@ -1,15 +1,0 @@
-
-_
-java:S4488"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(Ú¢°u
-`
-java:S4488"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(¹ý•­
-c
-java:S4488#"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(°áÁ‡üÿÿÿÿ
-]
-java:S4488("HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(µÀ–
-d
-java:S4488-"NReplace "@RequestMapping(method = RequestMethod.DELETE)" with "@DeleteMapping"(Ë­‹“
-i
-java:S44883"NReplace "@RequestMapping(method = RequestMethod.DELETE)" with "@DeleteMapping"(öÿÄÎøÿÿÿÿ
-i
-java:S44889"NReplace "@RequestMapping(method = RequestMethod.DELETE)" with "@DeleteMapping"(¥ŸÇýøÿÿÿÿ

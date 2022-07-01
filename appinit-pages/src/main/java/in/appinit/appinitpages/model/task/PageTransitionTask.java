@@ -1,13 +1,13 @@
 package in.appinit.appinitpages.model.task;
 
 import in.appinit.appinitpages.model.ScreenInfo;
-import in.appinit.appinitpages.model.variable.Variable;
 
-import java.util.List;
+import java.util.Map;
 
 public class PageTransitionTask extends SimpleTask {
     ScreenInfo transitionTo;
-    List<Variable> variables;
+    Map<String, Object> transitionParams;
+
 
     public ScreenInfo getTransitionTo() {
         return transitionTo;
@@ -17,11 +17,11 @@ public class PageTransitionTask extends SimpleTask {
         this.transitionTo = transitionTo;
     }
 
-    public List<Variable> getVariables() {
-        return variables;
+    public Map<String, Object> getTransitionParams() {
+        return transitionParams;
     }
 
-    public void setVariables(List<Variable> variables) {
-        this.variables = variables;
+    public void setTransitionParams(Map<String, Object> transitionParams) {
+        this.transitionParams = transitionParams;
     }
 }

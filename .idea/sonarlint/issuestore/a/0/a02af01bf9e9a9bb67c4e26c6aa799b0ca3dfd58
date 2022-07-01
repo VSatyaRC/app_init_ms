@@ -1,13 +1,0 @@
-
-e
-java:S4488"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(Õ÷÷žýÿÿÿÿ
-c
-java:S4488 "HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(úÕ›¾úÿÿÿÿ
-]	java:S125"<This block of commented-out lines of code should be removed.(ëÛŒðûÿÿÿÿ8×ª‚’˜0
-c
-java:S4488&"NReplace "@RequestMapping(method = RequestMethod.DELETE)" with "@DeleteMapping"(ê¸+
-^
-java:S4488+"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(¸ö„Ø
-Q	java:S1251"<This block of commented-out lines of code should be removed.(Æœ¢«
-X	java:S1257"<This block of commented-out lines of code should be removed.(È³ˆ¸8µÜ…’˜0
-V	java:S125>"<This block of commented-out lines of code should be removed.(²ÕÔýÿÿÿÿ

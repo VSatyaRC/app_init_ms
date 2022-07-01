@@ -59,4 +59,12 @@ public class VariableService {
         System.out.println("Deleting: " + id);
         variableRepository.deleteById(id);
     }
+
+
+    public Map<String, List<Variable>> searchByName(String startsWith, String appId) {
+        Map<String, List<Variable>> results = new HashMap<>();
+        results.put("variables", variableRepository.findAllByNameStartsWithIgnoreCaseAndAppId(startsWith, appId));
+        return results;
+    }
+
 }

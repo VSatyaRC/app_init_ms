@@ -9,11 +9,8 @@
     <file url="file://$PROJECT_DIR$/appinit-files/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/appinit-gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/appinit-gateway/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/appinit-page-events/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/appinit-page-events/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/appinit-pages/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/appinit-widgets/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/appinit-widgets/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/data-models/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/data-models/src/main/resources" charset="UTF-8" />
   </component>
 </project>

@@ -2,6 +2,7 @@ package in.appinit.appinitpages.controller.events;
 
 
 import in.appinit.appinitpages.model.Event;
+import in.appinit.appinitpages.model.variable.Variable;
 import in.appinit.appinitpages.services.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -52,10 +53,19 @@ public class EventController {
         return ResponseEntity.ok("Deleted all events");
     }*/
 
-
     @RequestMapping(value = "/{appId}/event/{id}", method = RequestMethod.GET)
     ResponseEntity<Event> saveEvent(@PathVariable String appId, @PathVariable String id) {
         return ResponseEntity.ok(eventService.getEvent(id));
+    }
+
+    @RequestMapping(value = "/{appId}/config/events")
+    ResponseEntity<Map<String, List<Event>>> getScreenEventConfiguarations(@PathVariable String appId) {
+        return ResponseEntity.ok(eventService.getAllFullEvents(appId));
+    }
+
+    @RequestMapping(value = "/{appId}/events/{startsWith}", method = RequestMethod.GET)
+    ResponseEntity<Map<String, List<Event>>> searchEvents(@PathVariable String appId, @PathVariable String startsWith) {
+        return ResponseEntity.ok(eventService.searchByName(startsWith, appId));
     }
 
 }

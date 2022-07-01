@@ -1,7 +1,6 @@
 package in.appinit.appconfig.model.screens;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.ui.Model;
 
 public class Query {
 
@@ -9,7 +8,6 @@ public class Query {
     String id;
 
     String name;
-    Model modelToQuery;
 
     public String getId() {
         return id;
@@ -27,11 +25,4 @@ public class Query {
         this.name = name;
     }
 
-    public Model getModelToQuery() {
-        return modelToQuery;
-    }
-
-    public void setModelToQuery(Model modelToQuery) {
-        this.modelToQuery = modelToQuery;
-    }
 }

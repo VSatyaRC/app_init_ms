@@ -7,7 +7,8 @@ public class Variable {
     String id;
     String name;
     String type;
-    Map<String, Object> valueDetails = new HashMap<>();
+    Map<String, Object> varArgs = new HashMap<>();
+    Map<String, Object> varParams = new HashMap<>();
 
     public Variable() {
     }
@@ -36,11 +37,19 @@ public class Variable {
         this.type = type;
     }
 
-    public Map<String, Object> getValueDetails() {
-        return valueDetails;
+    public Map<String, Object> getVarArgs() {
+        return varArgs;
     }
 
-    public void setValueDetails(Map<String, Object> valueDetails) {
-        this.valueDetails = valueDetails;
+    public void setVarArgs(Map<String, Object> varArgs) {
+        this.varArgs = varArgs;
+    }
+
+    public Map<String, Object> getVarParams() {
+        return varParams;
+    }
+
+    public void setVarParams(Map<String, Object> varParams) {
+        this.varParams = varParams;
     }
 }

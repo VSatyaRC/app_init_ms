@@ -1,5 +1,6 @@
 package in.appinit.appinitpages.model.task;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.data.annotation.Id;
 
 
@@ -9,6 +10,9 @@ public class SimpleTask {
     String id;
     String name;
     String type;
+
+    @JsonIgnore
+    String appId;
 
     public String getId() {
         return id;
@@ -32,5 +36,13 @@ public class SimpleTask {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public String getAppId() {
+        return appId;
+    }
+
+    public void setAppId(String appId) {
+        this.appId = appId;
     }
 }

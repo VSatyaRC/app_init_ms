@@ -1,20 +1,22 @@
 package in.appinit.appinitpages.services;
 
 import in.appinit.appinitpages.model.Event;
+import in.appinit.appinitpages.model.task.SimpleTask;
 import in.appinit.appinitpages.repositories.EventRepository;
+import in.appinit.appinitpages.repositories.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class EventService {
 
     @Autowired
     EventRepository eventRepository;
+
+    @Autowired
+    TaskRepository taskRepository;
 
 
     public Event saveEvent(String appId, Event event) {
@@ -53,4 +55,30 @@ public class EventService {
     public void deleteEvent(String appId, Event event) {
         eventRepository.deleteById(event.getId());
     }
+
+    public Map<String, List<Event>> getAllFullEvents(String appId) {
+        Map<String, List<Event>> response = new HashMap<>();
+        List<Event> events = eventRepository.findAllByAppId(appId);
+
+        events.forEach(e -> {
+            List<SimpleTask> tasks = new ArrayList<>();
+
+            if (null != e.getTasks()) {
+                e.getTasks().forEach(simpleTask -> {
+                    tasks.add((SimpleTask) taskRepository.findById(simpleTask.getId()).get());
+                });
+                e.setTasks(tasks);
+            }
+        });
+        response.put("events", events);
+        return response;
+    }
+
+
+    public Map<String, List<Event>> searchByName(String startsWith, String appId) {
+        Map<String, List<Event>> results = new HashMap<>();
+        results.put("events", eventRepository.findAllByNameStartsWithIgnoreCaseAndAppId(startsWith, appId));
+        return results;
+    }
+
 }

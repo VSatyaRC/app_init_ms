@@ -20,9 +20,7 @@
       <module name="appinit-discovery-server" target="11" />
       <module name="appinit-files" target="11" />
       <module name="appinit-gateway" target="11" />
-      <module name="appinit-page-events" target="11" />
       <module name="appinit-pages" target="11" />
-      <module name="appinit-widgets" target="11" />
       <module name="data-models" target="11" />
       <module name="data-models-tx" target="11" />
     </bytecodeTargetLevel>
@@ -33,9 +31,7 @@
       <module name="appinit-discovery-server" options="-parameters" />
       <module name="appinit-files" options="-parameters" />
       <module name="appinit-gateway" options="-parameters" />
-      <module name="appinit-page-events" options="-parameters" />
       <module name="appinit-pages" options="-parameters" />
-      <module name="appinit-widgets" options="-parameters" />
       <module name="data-models" options="-parameters" />
     </option>
   </component>

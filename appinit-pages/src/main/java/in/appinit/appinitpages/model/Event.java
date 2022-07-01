@@ -2,6 +2,7 @@ package in.appinit.appinitpages.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import in.appinit.appinitpages.model.task.CrUpTask;
+import in.appinit.appinitpages.model.task.SimpleTask;
 import org.springframework.data.annotation.Id;
 
 import java.util.List;
@@ -15,7 +16,7 @@ public class Event {
     @JsonIgnore
     String appId;
 
-    List<CrUpTask> crUpTasks;
+    List<SimpleTask> tasks;
 
     public String getId() {
         return id;
@@ -37,15 +38,13 @@ public class Event {
         this.type = type;
     }
 
-    public List<CrUpTask> getTasks() {
-        return crUpTasks;
+    public List<SimpleTask> getTasks() {
+        return tasks;
     }
 
-    public void setTasks(List<CrUpTask> crUpTasks) {
-        this.crUpTasks = crUpTasks;
+    public void setTasks(List<SimpleTask> tasks) {
+        this.tasks = tasks;
     }
-
-
 
     public String getAppId() {
         return appId;

@@ -2,25 +2,28 @@ package in.appinit.appinitpages.model.variable;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class Variable {
     String id;
+    String name;
+    String type;
 
     @JsonIgnore
     String appId;
-    String name;
-    Map<String, Object> valueDetails;
-
-    String type;
-
-    String description;
+    Map<String, Object> varArgs = new HashMap<>();
+    Map<String, Object> varParams = new HashMap<>();
 
     public Variable() {
     }
 
     public String getId() {
         return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getAppId() {
@@ -47,24 +50,30 @@ public class Variable {
         this.type = type;
     }
 
-    public Map<String, Object> getValueDetails() {
-        return valueDetails;
+    public Map<String, Object> getVarArgs() {
+        return varArgs;
     }
 
-    public void setValueDetails(Map<String, Object> valueDetails) {
-        this.valueDetails = valueDetails;
+    public void setVarArgs(Map<String, Object> varArgs) {
+        this.varArgs = varArgs;
     }
 
-    public String getDescription() {
-        return description;
+    public Map<String, Object> getVarParams() {
+        return varParams;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setVarParams(Map<String, Object> varParams) {
+        this.varParams = varParams;
     }
 
     @Override
     public String toString() {
-        return this.name + " " + this.description + " " + this.id;
+        return "Variable{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", type='" + type + '\'' +
+                ", varArgs=" + varArgs +
+                ", varParams=" + varParams +
+                '}';
     }
 }

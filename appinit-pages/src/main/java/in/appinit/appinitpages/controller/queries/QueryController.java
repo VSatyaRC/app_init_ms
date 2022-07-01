@@ -60,4 +60,7 @@ public class QueryController {
         return ResponseEntity.ok("Deleted all queries");
     }
 
+
+
+
 }

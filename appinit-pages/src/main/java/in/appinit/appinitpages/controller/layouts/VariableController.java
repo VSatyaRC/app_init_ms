@@ -1,5 +1,6 @@
 package in.appinit.appinitpages.controller.layouts;
 
+import in.appinit.appinitpages.model.task.SimpleTask;
 import in.appinit.appinitpages.model.variable.Variable;
 import in.appinit.appinitpages.services.VariableService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,6 +49,11 @@ public class VariableController {
     ResponseEntity<String> deleteVariable(@PathVariable String appId, @PathVariable String id) {
         variableService.deleteVariable(id);
         return ResponseEntity.ok("Deleted all variables");
+    }
+
+    @RequestMapping(value = "/{appId}/variables/{startsWith}", method = RequestMethod.GET)
+    ResponseEntity<Map<String, List<Variable>>> searchVariables(@PathVariable String appId, @PathVariable String startsWith) {
+        return ResponseEntity.ok(variableService.searchByName(startsWith, appId));
     }
 
 

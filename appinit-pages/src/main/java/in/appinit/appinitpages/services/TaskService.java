@@ -42,14 +42,17 @@ public class TaskService {
 
 
 */
-
+        SimpleTask task;
         if (gson.fromJson(simpleTask, JsonObject.class).get("type").isJsonNull()) {
-            return taskRepository.save(gson.fromJson(simpleTask, SimpleTask.class));
+            task = gson.fromJson(simpleTask, SimpleTask.class);
         } else if (gson.fromJson(simpleTask, JsonObject.class).get("type").getAsString().matches("Page")) {
-            return taskRepository.save(gson.fromJson(simpleTask, PageTransitionTask.class));
+            task = gson.fromJson(simpleTask, PageTransitionTask.class);
         } else {
-            return taskRepository.save(gson.fromJson(simpleTask, CrUpTask.class));
+            task = gson.fromJson(simpleTask, CrUpTask.class);
         }
+        task.setAppId(appId);
+        return taskRepository.save(task);
+
     }
 
     public SimpleTask getTask(String id) {
@@ -95,6 +98,12 @@ public class TaskService {
         }
         result.put("status", status);
         return result;
+    }
+
+    public Map<String, List<SimpleTask>> searchByName(String startsWith, String appId) {
+        Map<String, List<SimpleTask>> results = new HashMap<>();
+        results.put("tasks", taskRepository.findAllByNameStartsWithIgnoreCaseAndAppId(startsWith, appId));
+        return results;
     }
 
 /*

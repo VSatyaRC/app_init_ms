@@ -15,6 +15,6 @@ public interface ScreenInfoRepository extends MongoRepository<ScreenInfo, String
 
     Optional<ScreenInfo> findByIdAndAppId(String id, String appId);
 
-    @Query(fields = "{id:1, screenName:1}")
+    @Query(fields = "{id:1, screenName:1, pageVariables:1}")
     List<ScreenInfo> findAllByAppIdAndScreenNameIgnoreCaseStartsWith(String appId, String screenName);
 }

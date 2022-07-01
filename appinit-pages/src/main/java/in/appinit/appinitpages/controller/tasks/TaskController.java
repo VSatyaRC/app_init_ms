@@ -20,7 +20,7 @@ public class TaskController {
 
     @RequestMapping(value = "/{appId}/task", method = RequestMethod.POST)
     ResponseEntity<SimpleTask> saveTask(@PathVariable String appId, @RequestBody String simpleTask) {
-
+        System.out.println(simpleTask);
         return ResponseEntity.ok(taskService.saveTask(appId, simpleTask));
     }
 /*
@@ -44,6 +44,13 @@ public class TaskController {
     ResponseEntity<Map<String, List<SimpleTask>>> getAllTasks(@PathVariable String appId) {
         return ResponseEntity.ok(taskService.getAllTasks(appId));
     }
+
+    @RequestMapping(value = "/{appId}/tasks/{startsWith}", method = RequestMethod.GET)
+    ResponseEntity<Map<String, List<SimpleTask>>> searchTasks(@PathVariable String appId, @PathVariable String startsWith) {
+        return ResponseEntity.ok(taskService.searchByName(startsWith, appId));
+    }
+
+
 
  /*   @RequestMapping(value = "/{appId}/tasks", method = RequestMethod.DELETE)
     ResponseEntity<String> deleteTasks(@PathVariable String appId) {

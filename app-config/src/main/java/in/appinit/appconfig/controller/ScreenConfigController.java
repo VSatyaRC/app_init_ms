@@ -33,7 +33,6 @@ public class ScreenConfigController {
         return ResponseEntity.ok(screenInfoList);
     }
 
-
     @RequestMapping(value = "/{appId}/search/screens/{startsWith}", method = RequestMethod.GET)
     public ResponseEntity<Map<String, List<ScreenInfo>>> searchAppScreens(@PathVariable String appId, @PathVariable String startsWith) {
         Map<String, List<ScreenInfo>> screenInfoList = new HashMap<>();

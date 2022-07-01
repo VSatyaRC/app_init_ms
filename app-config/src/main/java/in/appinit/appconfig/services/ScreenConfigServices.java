@@ -48,10 +48,10 @@ public class ScreenConfigServices {
 
     public ScreenInfo save(String appId, String screenId, String pageItem, String updateType, Object itemToUpdate) {
 
-        System.out.println(itemToUpdate.toString());
+//        System.out.println(itemToUpdate.toString());
         ScreenInfo screenInfo = screenInfoRepository.findByIdAndAppId(screenId, appId).get();
-        System.out.println("Updating...");
-        System.out.println(gson.toJson(screenInfo));
+//        System.out.println("Updating...");
+//        System.out.println(gson.toJson(screenInfo));
         screenInfo.setAppId(appId);
 
         switch (pageItem.toUpperCase()) {
@@ -75,7 +75,7 @@ public class ScreenConfigServices {
 
     private void appendQueryInScreenInfo(String updateType, ScreenInfo screenInfo, Query query) {
         screenInfo.setPageQueries((null == screenInfo.getPageQueries()) ? new ArrayList<>() : screenInfo.getPageQueries());
-        screenInfo.getPageQueries().removeIf(q -> (q.getId().matches(query.getId())));
+        screenInfo.getPageQueries().removeIf(q -> null != q.getId() && q.getId().matches(query.getId()));
         if (!updateType.matches("DELETE")) {
             screenInfo.getPageQueries().add(query);
         }
