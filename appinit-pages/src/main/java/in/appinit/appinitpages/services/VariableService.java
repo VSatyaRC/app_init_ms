@@ -60,11 +60,15 @@ public class VariableService {
         variableRepository.deleteById(id);
     }
 
-
     public Map<String, List<Variable>> searchByName(String startsWith, String appId) {
         Map<String, List<Variable>> results = new HashMap<>();
         results.put("variables", variableRepository.findAllByNameStartsWithIgnoreCaseAndAppId(startsWith, appId));
         return results;
     }
 
+    public Map<String, List<Variable>> getPageVariables(String screenId, String appId, Map<String, List<String>> variables) {
+        Map<String, List<Variable>> results = new HashMap<>();
+        results.put("variables", variableRepository.findAllByIdIn(variables.get("variables")));
+        return results;
+    }
 }

@@ -45,6 +45,11 @@ public class TaskController {
         return ResponseEntity.ok(taskService.getAllTasks(appId));
     }
 
+    @RequestMapping(value = "/{appId}/{screenId}/tasks", method = RequestMethod.POST)
+    ResponseEntity<Map<String, List<SimpleTask>>> getPageTasks(@PathVariable String appId, @PathVariable String screenId, @RequestBody Map<String, List<String>> tasks) {
+        return ResponseEntity.ok(taskService.getPageTasks(screenId, appId, tasks));
+    }
+
     @RequestMapping(value = "/{appId}/tasks/{startsWith}", method = RequestMethod.GET)
     ResponseEntity<Map<String, List<SimpleTask>>> searchTasks(@PathVariable String appId, @PathVariable String startsWith) {
         return ResponseEntity.ok(taskService.searchByName(startsWith, appId));

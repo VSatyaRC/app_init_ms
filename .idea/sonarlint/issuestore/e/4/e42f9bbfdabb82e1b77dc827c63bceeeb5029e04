@@ -1,0 +1,14 @@
+
+a
+java:S1192I"FDefine a constant instead of duplicating this literal "tasks" 4 times.(‘²ç¢þÿÿÿÿ
+f
+java:S3655@"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ùÎªà
+V	java:S125#"<This block of commented-out lines of code should be removed.(å‚­öÿÿÿÿÿ
+G
+java:S1172E",Remove this unused method parameter "appId".(à”³©üÿÿÿÿ
+V	java:S125H"<This block of commented-out lines of code should be removed.(•»Þ©üÿÿÿÿ
+Q	java:S125M"<This block of commented-out lines of code should be removed.(ºšÄã
+V	java:S125T"<This block of commented-out lines of code should be removed.(ñ²“Ôûÿÿÿÿ
+U
+java:S1172m":Remove these unused method parameters "screenId", "appId".(ú¶é‰üÿÿÿÿ
+X	java:S125t"<This block of commented-out lines of code should be removed.(ýçŽÐ8õí—×›0

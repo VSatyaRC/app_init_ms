@@ -106,6 +106,12 @@ public class TaskService {
         return results;
     }
 
+    public Map<String, List<SimpleTask>> getPageTasks(String screenId, String appId, Map<String, List<String>> tasks) {
+        Map<String, List<SimpleTask>> results = new HashMap<>();
+        results.put("tasks", taskRepository.findAllByIdIn(tasks.get("tasks")));
+        return results;
+    }
+
 /*
     public void deleteTasks(String appId) {
         taskRepository.deleteAllByAppId(appId);

@@ -19,4 +19,6 @@ public interface QueryRepository extends MongoRepository<Query, String> {
     List<Query> findAllByAppIdAndNameContainsIgnoreCase(String appId, String queryName);
 
     List<Query> findAllByAppIdAndNameStartsWithIgnoreCase(String appId, String queryName);
+
+    List<Query> findAllByIdIn(List<String> queries);
 }

@@ -74,4 +74,10 @@ public class QueryService {
     }
 
 
+    public Map<String, List<Query>> getPageQueries(String appId, Map<String, List<String>> queries) {
+        List<Query> result = queryRepository.findAllByIdIn(queries.get("queries"));
+        Map<String, List<Query>> response = new HashMap<>();
+        response.put("queries", result);
+        return response;
+    }
 }

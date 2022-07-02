@@ -18,6 +18,8 @@ public interface EventRepository extends MongoRepository<Event, String> {
     @Query(fields = "{_id:1, name:1, type : 1}")
     List<Event> findAllByNameStartsWithIgnoreCaseAndAppId(String startsWith, String appId);
 
+    List<Event> findAllByIdIn(List<String> events);
+
 
  /*   void deleteAllByAppId(String appId);
     

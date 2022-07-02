@@ -27,7 +27,7 @@ public class QueryController {
 
     @RequestMapping(value = "/{appId}/{screenId}/query", method = RequestMethod.POST)
     ResponseEntity<Query> saveQuery(@PathVariable String appId, @RequestBody Query query, @PathVariable String screenId) {
-        System.out.println("screenId: "+ screenId);
+        System.out.println("screenId: " + screenId);
         System.out.println(gson.toJson(query));
         return ResponseEntity.ok(queryService.saveQuery(appId, screenId, query));
     }
@@ -40,6 +40,11 @@ public class QueryController {
     @RequestMapping(value = "/{appId}/queries", method = RequestMethod.GET)
     ResponseEntity<Map<String, List<Query>>> getAllQueries(@PathVariable String appId) {
         return ResponseEntity.ok(queryService.getAllQueries(appId));
+    }
+
+    @RequestMapping(value = "/{appId}/{screenId}/queries", method = RequestMethod.POST)
+    ResponseEntity<Map<String, List<Query>>> getPageQueries(@PathVariable String appId, @PathVariable String screenId, @RequestBody Map<String, List<String>> queries) {
+        return ResponseEntity.ok(queryService.getPageQueries(appId, queries));
     }
 
     @RequestMapping(value = "/{appId}/queries", method = RequestMethod.DELETE)
@@ -59,8 +64,6 @@ public class QueryController {
         queryService.deleteAllQueries();
         return ResponseEntity.ok("Deleted all queries");
     }
-
-
 
 
 }

@@ -18,4 +18,6 @@ public interface VariableRepository extends MongoRepository<Variable, String> {
 
     @Query(fields = "{_id:1, name:1, type : 1}")
     List<Variable> findAllByNameStartsWithIgnoreCaseAndAppId(String startsWith, String appId);
+
+    List<Variable> findAllByIdIn(List<String> variables);
 }

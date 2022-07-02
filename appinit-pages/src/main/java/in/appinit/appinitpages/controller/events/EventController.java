@@ -2,7 +2,6 @@ package in.appinit.appinitpages.controller.events;
 
 
 import in.appinit.appinitpages.model.Event;
-import in.appinit.appinitpages.model.variable.Variable;
 import in.appinit.appinitpages.services.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -66,6 +65,12 @@ public class EventController {
     @RequestMapping(value = "/{appId}/events/{startsWith}", method = RequestMethod.GET)
     ResponseEntity<Map<String, List<Event>>> searchEvents(@PathVariable String appId, @PathVariable String startsWith) {
         return ResponseEntity.ok(eventService.searchByName(startsWith, appId));
+    }
+
+    @RequestMapping(value = "/{appId}/{screenId}/events", method = RequestMethod.POST)
+    ResponseEntity<Map<String, List<Event>>> pageEvents(@PathVariable String appId, @PathVariable String screenId, @RequestBody Map<String, List<String>> events) {
+        System.out.println(events.toString());
+        return ResponseEntity.ok(eventService.pageEvents(screenId, appId, events));
     }
 
 }

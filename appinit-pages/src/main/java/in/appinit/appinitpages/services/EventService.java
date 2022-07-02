@@ -81,4 +81,9 @@ public class EventService {
         return results;
     }
 
+    public Map<String, List<Event>> pageEvents(String screenId, String appId, Map<String, List<String>> events) {
+        Map<String, List<Event>> results = new HashMap<>();
+        results.put("events", eventRepository.findAllByIdIn(events.get("events")));
+        return results;
+    }
 }

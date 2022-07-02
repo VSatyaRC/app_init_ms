@@ -16,6 +16,8 @@ public interface TaskRepository<T extends SimpleTask> extends MongoRepository<T,
     @Query(fields = "{_id:1, name:1, type : 1}")
     List<T> findAllByNameStartsWithIgnoreCaseAndAppId(String startsWith, String appId);
 
+    List<T> findAllByIdIn(List<String> tasks);
+
 /*    void deleteAllByAppId(String appId);
 
     List<Task> findAllByAppId(String appId);*/
