@@ -7,6 +7,8 @@ public class Variable {
     String id;
     String name;
     String type;
+
+    String testValue;
     Map<String, Object> varArgs = new HashMap<>();
     Map<String, Object> varParams = new HashMap<>();
 
@@ -27,6 +29,14 @@ public class Variable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getTestValue() {
+        return testValue;
+    }
+
+    public void setTestValue(String testValue) {
+        this.testValue = testValue;
     }
 
     public String getType() {

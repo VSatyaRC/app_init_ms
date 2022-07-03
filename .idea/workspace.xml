@@ -5,20 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5b8819a-f034-4a47-8617-71935f143496" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/6/26631b63ad33518e0f0fde9706ce4213352e5293" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/2/927fda923c95f8924923220d431cdb8b09be5066" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/d/fdd22bbc28cee46f23695642dd5af6de9aa0184c" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appinit-pages/src/main/java/in/appinit/appinitpages/controller/events/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/appinit-pages/src/main/java/in/appinit/appinitpages/controller/events/EventController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appinit-pages/src/main/java/in/appinit/appinitpages/controller/layouts/VariableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/appinit-pages/src/main/java/in/appinit/appinitpages/controller/layouts/VariableController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appinit-pages/src/main/java/in/appinit/appinitpages/controller/queries/QueryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/appinit-pages/src/main/java/in/appinit/appinitpages/controller/queries/QueryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appinit-pages/src/main/java/in/appinit/appinitpages/controller/tasks/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/appinit-pages/src/main/java/in/appinit/appinitpages/controller/tasks/TaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app-config/src/main/java/in/appinit/appconfig/model/Variable.java" beforeDir="false" afterPath="$PROJECT_DIR$/app-config/src/main/java/in/appinit/appconfig/model/Variable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appinit-pages/src/main/java/in/appinit/appinitpages/model/variable/Variable.java" beforeDir="false" afterPath="$PROJECT_DIR$/appinit-pages/src/main/java/in/appinit/appinitpages/model/variable/Variable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appinit-pages/src/main/java/in/appinit/appinitpages/repositories/EventRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/appinit-pages/src/main/java/in/appinit/appinitpages/repositories/EventRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appinit-pages/src/main/java/in/appinit/appinitpages/repositories/QueryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/appinit-pages/src/main/java/in/appinit/appinitpages/repositories/QueryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appinit-pages/src/main/java/in/appinit/appinitpages/repositories/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/appinit-pages/src/main/java/in/appinit/appinitpages/repositories/TaskRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appinit-pages/src/main/java/in/appinit/appinitpages/repositories/VariableRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/appinit-pages/src/main/java/in/appinit/appinitpages/repositories/VariableRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appinit-pages/src/main/java/in/appinit/appinitpages/services/EventService.java" beforeDir="false" afterPath="$PROJECT_DIR$/appinit-pages/src/main/java/in/appinit/appinitpages/services/EventService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appinit-pages/src/main/java/in/appinit/appinitpages/services/QueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/appinit-pages/src/main/java/in/appinit/appinitpages/services/QueryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appinit-pages/src/main/java/in/appinit/appinitpages/services/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/appinit-pages/src/main/java/in/appinit/appinitpages/services/TaskService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appinit-pages/src/main/java/in/appinit/appinitpages/services/VariableService.java" beforeDir="false" afterPath="$PROJECT_DIR$/appinit-pages/src/main/java/in/appinit/appinitpages/services/VariableService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appinit-pages/src/main/java/in/appinit/appinitpages/widget_config/data/TxDataConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/appinit-pages/src/main/java/in/appinit/appinitpages/widget_config/data/TxDataConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

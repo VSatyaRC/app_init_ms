@@ -9,6 +9,7 @@ public class Variable {
     String id;
     String name;
     String type;
+    String testValue;
 
     @JsonIgnore
     String appId;
@@ -64,6 +65,14 @@ public class Variable {
 
     public void setVarParams(Map<String, Object> varParams) {
         this.varParams = varParams;
+    }
+
+    public String getTestValue() {
+        return testValue;
+    }
+
+    public void setTestValue(String testValue) {
+        this.testValue = testValue;
     }
 
     @Override

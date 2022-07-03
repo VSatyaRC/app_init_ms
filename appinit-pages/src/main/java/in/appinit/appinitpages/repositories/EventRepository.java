@@ -14,7 +14,6 @@ public interface EventRepository extends MongoRepository<Event, String> {
 
     List<Event> findAllByAppId(String appId);
 
-
     @Query(fields = "{_id:1, name:1, type : 1}")
     List<Event> findAllByNameStartsWithIgnoreCaseAndAppId(String startsWith, String appId);
 

@@ -27,6 +27,8 @@ public class QueryService {
 
     public Query saveQuery(String appId, String screenId, Query query) {
         query.setAppId(appId);
+
+
        /* String serverUrl = "http://app-config/app/" + appId + "/" + screenId + "/screen/updateItem";
 
         Query query1 = new Query();
