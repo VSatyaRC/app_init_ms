@@ -54,9 +54,9 @@ public class ScreenConfigController {
         return ResponseEntity.ok(screenConfigServices.save(appId, screenId, pageItem, updateType, itemToUpdate));
     }
 
-    @RequestMapping(value = "/{appId}/screen/", method = RequestMethod.DELETE)
-    public ResponseEntity<Map<String, String>> deleteScreenConfig(@PathVariable String appId, @RequestBody ScreenInfo screenInfo) {
-        screenConfigServices.deleteScreen(appId, screenInfo);
+    @RequestMapping(value = "/{appId}/{screenId}/screen/delete", method = RequestMethod.GET)
+    public ResponseEntity<Map<String, String>> deleteScreenConfig(@PathVariable String appId, @PathVariable String screenId) {
+        screenConfigServices.deleteScreen(screenId);
         Map<String, String> response = new HashMap<>();
         response.put("status", "deleted");
         return ResponseEntity.ok(response);

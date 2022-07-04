@@ -97,6 +97,7 @@ public class AppConfigService {
         JsonObject eventsJson = gson.fromJson(importEvents(appId), JsonObject.class);
         JsonObject tasksJson = gson.fromJson(importTasks(appId), JsonObject.class);
         JsonObject variablesJson = gson.fromJson(importVariables(appId), JsonObject.class);
+        JsonObject modelsJson = gson.fromJson(importModels(appId), JsonObject.class);
 
         JsonObject response = new JsonObject();
         response.add("appDetails", gson.fromJson(appDetails, JsonObject.class));
@@ -104,6 +105,7 @@ public class AppConfigService {
         response.add("events", eventsJson.getAsJsonArray("events"));
         response.add("tasks", tasksJson.getAsJsonArray("tasks"));
         response.add("variables", variablesJson.getAsJsonArray("variables"));
+        response.add("models", modelsJson.getAsJsonArray("models"));
 
         return gson.toJson(response);
     }
@@ -128,6 +130,12 @@ public class AppConfigService {
 
     public String importTasks(String appId) {
         String response = restTemplate.getForObject("http://appinit-pages/page-config/" + appId + "/tasks", String.class);
+        logger.debug("All Tasks", response);
+        return response;
+    }
+
+    public String importModels(String appId) {
+        String response = restTemplate.getForObject("http://appinit-models/models/" + appId + "/models", String.class);
         logger.debug("All Tasks", response);
         return response;
     }

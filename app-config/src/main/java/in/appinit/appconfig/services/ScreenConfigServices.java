@@ -118,8 +118,8 @@ public class ScreenConfigServices {
     }
 
 
-    public void deleteScreen(String appId, ScreenInfo screenInfo) {
-        screenInfoRepository.deleteById(screenInfo.getId());
+    public void deleteScreen(String screenInd) {
+        screenInfoRepository.deleteById(screenInd);
     }
 
     public List<ScreenInfo> searchAllByAppId(String appId, String startsWith) {
