@@ -16,7 +16,7 @@ public class ImageWidget extends SimpleWidget {
 
     @Override
     public StyleConfig instanceWithConfig() {
-        StyleConfig styleConfig = new StyleConfig("", "", "Image");
+        StyleConfig styleConfig = new StyleConfig("", "url", "Image");
         styleConfig.appendConfig("url", "");
         return styleConfig;
     }

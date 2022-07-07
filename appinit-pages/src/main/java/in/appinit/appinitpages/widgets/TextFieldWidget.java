@@ -22,7 +22,7 @@ public class TextFieldWidget extends SimpleWidget {
 
 
     private static StyleConfig textFieldWidgetConfig() {
-        StyleConfig styleConfig = new StyleConfig("","", "TextField");
+        StyleConfig styleConfig = new StyleConfig("","text", "TextField");
         styleConfig.appendConfig("label", "Label");
         styleConfig.appendConfig("hint", "Hint text");
         return styleConfig;

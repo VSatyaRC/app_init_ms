@@ -21,7 +21,7 @@ public class TextWidget extends SimpleWidget {
     }
 
     public static StyleConfig textWidgetConfig() {
-        StyleConfig styleConfig = new StyleConfig("", "", "Text");
+        StyleConfig styleConfig = new StyleConfig("", "text", "Text");
         styleConfig.appendConfig("text", "Click to edit");
         styleConfig.appendConfig("fontWeight", 4);
         styleConfig.appendConfig("fontSize", 14);
