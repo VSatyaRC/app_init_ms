@@ -1,5 +1,7 @@
 package in.appinit.datamodels.controller;
 
+import com.google.gson.Gson;
+import com.netflix.discovery.converters.Auto;
 import in.appinit.datamodels.models.Model;
 import in.appinit.datamodels.services.ModelService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +17,9 @@ public class ModelController {
 
     @Autowired
     ModelService modelService;
+
+    @Autowired
+    Gson gson;
 
     @RequestMapping(value = "/{appId}/models", method = RequestMethod.POST)
     ResponseEntity<Map<String, List<Model>>> saveAllModels(@PathVariable String appId, @RequestBody Map<String, Model> dataModelsMap) {
@@ -39,7 +44,9 @@ public class ModelController {
     }
 
     @RequestMapping(value = "/{appId}/model", method = RequestMethod.DELETE)
-    ResponseEntity<String> deleteModel(@PathVariable String appId, @RequestBody Model model) {
+    ResponseEntity<String> deleteModel(@PathVariable String appId, @RequestBody String modelString) {
+
+        Model model = gson.fromJson(modelString, Model.class);
         System.out.println("Deleting: " + model.getName());
         modelService.deleteModel(appId, model);
         return ResponseEntity.ok("Deleted all models");

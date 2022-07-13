@@ -87,13 +87,9 @@ public class ModelService {
     }
 
     public void deleteModel(String appId, Model model) {
-        List<String> propertiesInModel = model.getProperties().stream().map(Property::getId).collect(Collectors.toList());
+        List<String> propertiesInModel = dataModelRepository.findById(model.getId()).orElseGet(Model::new).getProperties().stream().map(Property::getId).collect(Collectors.toList());
         dataModelRepository.deleteById(model.getId());
-
         propertyServices.deleteAllById(propertiesInModel);
-        propertyRepository.findAllById(model.getProperties().stream().map(Property::getId).collect(Collectors.toList())).forEach(p -> {
-            System.out.println(p.getId() + " " + p.getName());
-        });
     }
 
     public List<String> modelsInApp(String appId) {

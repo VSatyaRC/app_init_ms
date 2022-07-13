@@ -4,8 +4,10 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import in.appinit.appinitpages.model.datamodel.Model;
 import org.springframework.data.annotation.Id;
 
+import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class Query {
 
@@ -19,6 +21,7 @@ public class Query {
     Map<String, Filter> filters = new LinkedHashMap<>();
     Map<String, FilterGroup> filterGroups = new LinkedHashMap<>();
 
+    Set<String> resultTypes = new HashSet<>();
 
     public Query() {
 
@@ -70,5 +73,13 @@ public class Query {
 
     public void setFilterGroups(Map<String, FilterGroup> filterGroups) {
         this.filterGroups = filterGroups;
+    }
+
+    public Set<String> getResultTypes() {
+        return resultTypes;
+    }
+
+    public void setResultTypes(Set<String> resultTypes) {
+        this.resultTypes = resultTypes;
     }
 }

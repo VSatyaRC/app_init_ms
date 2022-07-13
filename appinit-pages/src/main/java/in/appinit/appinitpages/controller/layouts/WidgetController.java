@@ -44,6 +44,4 @@ public class WidgetController {
     public ResponseEntity<SimpleWidget> saveInitialWidgetConfig(@PathVariable String widgetName) {
         return ResponseEntity.ok(widgetServices.updateInitConfig(widgetName));
     }
-
-
 }

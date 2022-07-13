@@ -3,6 +3,7 @@ package in.appinit.datamodels.models;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.data.annotation.Id;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Model {
@@ -13,7 +14,7 @@ public class Model {
     @JsonIgnore
     String appId;
     String name;
-    List<Property> properties;
+    List<Property> properties = new ArrayList<>();
 
     public String getId() {
         return id;

@@ -1,17 +1,7 @@
 package in.appinit.appinitpages.widget_config.data;
 
-import in.appinit.appinitpages.model.Query;
-import in.appinit.appinitpages.model.datamodel.Property;
-import org.bson.types.ObjectId;
-import org.springframework.data.annotation.Id;
+public class SimpleVariable {
 
-
-public class DataConfig {
-
-    // key => key is the key in configMap of StyleConfig,
-    // useful when there are multiple configurable items
-    // that can accept dataConfig.
-    @Id
     String id;
     String widgetKey;
     String configKey;
@@ -19,11 +9,7 @@ public class DataConfig {
     String testValue;
     Object value;
 
-    String key;
-    Query query;
-    Property property;
-
-    public DataConfig() {
+    public SimpleVariable() {
     }
 
     public String getId() {
@@ -72,29 +58,5 @@ public class DataConfig {
 
     public void setValue(Object value) {
         this.value = value;
-    }
-
-    public String getKey() {
-        return key;
-    }
-
-    public void setKey(String key) {
-        this.key = key;
-    }
-
-    public Query getQuery() {
-        return query;
-    }
-
-    public void setQuery(Query query) {
-        this.query = query;
-    }
-
-    public Property getProperty() {
-        return property;
-    }
-
-    public void setProperty(Property property) {
-        this.property = property;
     }
 }

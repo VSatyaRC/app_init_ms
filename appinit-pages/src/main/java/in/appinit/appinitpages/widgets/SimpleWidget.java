@@ -9,10 +9,10 @@ public abstract class SimpleWidget extends SuperWidget {
     protected SimpleWidget() {
         super.simpleName = widgetName();
         /*Danger do not uncomment this, do it  only if you want to save init config to db*/
-        //this.styleConfig = instanceWithConfig();
+//        this.styleConfig = instanceWithConfig();
     }
 
-    StyleConfig styleConfig;
+    StyleConfig styleConfig= new StyleConfig();
 
     abstract String widgetName();
 

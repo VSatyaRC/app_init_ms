@@ -8,6 +8,7 @@ import in.appinit.appinitpages.widget_config.data.TxDataConfig;
 import in.appinit.appinitpages.widget_config.event.TxEventConfig;
 import in.appinit.appinitpages.widgets.*;
 import in.appinit.appinitpages.widgets.widgettree.Layout;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -81,7 +82,13 @@ public class LayoutServices {
         });
 
         layoutJson.get("txDataConfig").getAsJsonArray().forEach(item -> {
-            layout.getTxDataConfig().add(gson.fromJson(item.getAsJsonObject(), TxDataConfig.class));
+            TxDataConfig txDataConfig = gson.fromJson(item.getAsJsonObject(), TxDataConfig.class);
+            try {
+                txDataConfig.getDataConfig().setId((null == txDataConfig.getDataConfig().getId() || txDataConfig.getDataConfig().getId().trim().isBlank()) ? (new ObjectId()).toString() : txDataConfig.getDataConfig().getId());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            layout.getTxDataConfig().add(txDataConfig);
             System.out.println("tc: " + item.getAsJsonObject().toString());
         });
 

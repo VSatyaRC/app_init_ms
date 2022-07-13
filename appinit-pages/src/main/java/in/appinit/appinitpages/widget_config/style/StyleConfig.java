@@ -11,6 +11,7 @@ public class StyleConfig extends WidgetConfig {
     @Id
     String id;
     private String txKey = "";
+    private String txValue = "";
     //key => option_name
 
     private String widgetName;
@@ -65,6 +66,10 @@ public class StyleConfig extends WidgetConfig {
             return "NA";
         }
         return configMap.get(txKey);
+    }
+
+    public void setTxValue(String txValue) {
+        this.txValue = txValue;
     }
 
     public void appendConfig(String configName, Object configValue) {
