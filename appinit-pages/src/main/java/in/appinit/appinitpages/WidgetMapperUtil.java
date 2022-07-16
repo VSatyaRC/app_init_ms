@@ -19,6 +19,8 @@ public class WidgetMapperUtil {
                 return new Gson().fromJson(simpleWidget, AppBarWidget.class);
             case "Column":
                 return new Gson().fromJson(simpleWidget, ColumnWidget.class);
+            case "Switcher":
+                return new Gson().fromJson(simpleWidget, SwitcherWidget.class);
             case "Text":
                 return new Gson().fromJson(simpleWidget, TextWidget.class);
             case "TextField":
@@ -53,8 +55,8 @@ public class WidgetMapperUtil {
                 return new AppBarWidget();
             case "Column":
                 return new ColumnWidget();
-            case "Text":
-                return new TextWidget();
+            case "Switcher":
+                return new SwitcherWidget();
             case "TextField":
                 return new TextFieldWidget();
             case "Image":

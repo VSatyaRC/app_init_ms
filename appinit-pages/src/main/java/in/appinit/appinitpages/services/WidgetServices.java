@@ -43,6 +43,7 @@ public class WidgetServices {
         simpleWidgetRepository.save(new CardWidget());
         simpleWidgetRepository.save(new ClickWidget());
         simpleWidgetRepository.save(new ColumnWidget());
+        simpleWidgetRepository.save(new SwitcherWidget());
         simpleWidgetRepository.save(new ContainerWidget());
         simpleWidgetRepository.save(new ExpandedWidget());
         simpleWidgetRepository.save(new PaddingWidget());
@@ -61,6 +62,7 @@ public class WidgetServices {
         styleConfigRepository.save(WidgetMapperUtil.widgetWithInitConfig("Card").instanceWithConfig());
         styleConfigRepository.save(WidgetMapperUtil.widgetWithInitConfig("Click").instanceWithConfig());
         styleConfigRepository.save(WidgetMapperUtil.widgetWithInitConfig("Column").instanceWithConfig());
+        styleConfigRepository.save(WidgetMapperUtil.widgetWithInitConfig("Switcher").instanceWithConfig());
         styleConfigRepository.save(WidgetMapperUtil.widgetWithInitConfig("Container").instanceWithConfig());
         styleConfigRepository.save(WidgetMapperUtil.widgetWithInitConfig("Expanded").instanceWithConfig());
         styleConfigRepository.save(WidgetMapperUtil.widgetWithInitConfig("Padding").instanceWithConfig());

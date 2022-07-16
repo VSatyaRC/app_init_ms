@@ -3,6 +3,7 @@ package in.appinit.appconfig.model.events;
 public class Event {
     String id;
     String name;
+    String type;
 
     public String getId() {
         return id;
@@ -18,5 +19,13 @@ public class Event {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }
